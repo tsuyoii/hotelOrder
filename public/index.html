@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--    调用百度地图API-->
+    <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=3.0&ak=ambq68D76kV3g1UhSVXsG2sjRQq7Ob7D"></script>
+
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <!--    iconfont图标库的使用:添加图标至购物车->添加至项目->项目->查看在线链接-->
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1786224_0aexbmgu3m4l.css">
+    <!--    评论表样式-->
+<!--    <link href="//s3plus.meituan.net/v1/mss_65766da973d14523b3d781fe3ac2bbac/www-assets/views/product-detail/product-detail-v931eef9b.css" rel="stylesheet" />-->
+<!--    <link href="//s3plus.meituan.net/v1/mss_65766da973d14523b3d781fe3ac2bbac/www-assets/1-vbafb26ae.css" rel="stylesheet" />-->
+
+    <!--    <link href="../src/assets/css/review.css" rel="stylesheet" />-->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  ::-webkit-scrollbar { width: 5px;}
+  ::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+  ::-webkit-scrollbar-thumb { height: 30px; background-color: rgb(192, 192, 192); border-radius: 3px;}
+</style>
