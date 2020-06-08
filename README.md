@@ -1,3 +1,5 @@
+＃注：目前发现了一些问题，正在努力修复中
+
 # hotelweb
 
 ## Project setup
