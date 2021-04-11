@@ -6,7 +6,7 @@
                 <el-card style="float: right;margin-top:20px;width: 28%">
                     <span class="search1">
                         <h3>温馨提示</h3><br>
-                        <p>顾客定价房是指酒店决定该房以顾客最终定价进行收费，酒店给出参考价格，供顾客进行评价参考,如未按时定价，将按原价自动扣款</p>
+                        <p>酒店决定该房以最终定价进行收费，酒店给出参考价格，进行评价参考,如未按时定价，将按原价自动扣款</p>
                     </span><br>
 
                     <span class="search1">
@@ -23,9 +23,9 @@
                             <span style="position:relative;font: large bold;margin-left: 5px;top:-8px">{{ item.room_type }}</span>
                             <span style="margin-left: 20px" v-show="item.isCustomPrice">
                         <el-tag
-                                key="顾客定价房"
+                                key="定价房"
                                 type="warning"
-                                effect="plain">顾客定价房
+                                effect="plain">定价房
                         </el-tag>
                     </span>
                             <span style="font:large bold;float:right;color: #ff9900">￥{{ item.room_price }}元<br>
@@ -177,7 +177,7 @@
                 dialogVisible:false,//定价框
                 formLabelWidth: '120px',
                 yuanjia:'0',//原价，建议价格
-                appraise:'',//顾客的定价
+                appraise:'',//定价
                 bookrefreshId:0,//获取要定价的订单详情
             };
         },
@@ -191,7 +191,7 @@
                 }
             })
 
-                //根据用户id查询该用户的顾客定价房订单
+                //根据用户id查询该用户的定价房订单
                 let uid = parseInt(window.sessionStorage.getItem('userId'))
                 axios.post('http://127.0.0.1:8099/book/bookIdlist/'+uid).then((resp)=>{
                     console.log(resp.data.data)
@@ -215,8 +215,8 @@
             //预订
             order(item){
                 if (item.room_state == "空闲") {
-                    if(item.room_type == "顾客定价房") {
-                        alert('此房间为顾客定价房，可先填写订单，入住离开后再付款')
+                    if(item.room_type == "定价房") {
+                        alert('此房间为定价房，可先填写订单，入住离开后再付款')
                     }
                     this.$router.push({
                         path: '/hotelPayfor',
@@ -281,7 +281,7 @@
                 // 指定图表的配置项和数据
                 let option = {
                     title: {
-                        text: '顾客定价房定价折线图',
+                        text: '定价房定价折线图',
                         subtext: '每月统计'
                     },
                     tooltip: {
