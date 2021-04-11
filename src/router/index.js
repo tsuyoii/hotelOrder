@@ -136,7 +136,7 @@ const routes = [
   },
   {
     path:'/customRoom',
-    name:'顾客定价房',
+    name:'定价房',
     component:CustomAppraise,
     meta: {
       keepAlive: true,
