@@ -84,7 +84,7 @@
                     { type: 'success', label: '大床房' },
                     { type: 'info', label: '高级大床房' },
                     { type: 'danger', label: '四人间' },
-                    { type: 'warning', label: '顾客定价房' }
+                    { type: 'warning', label: '定价房' }
                 ],
                 paimin:[
                     {id: 1, name: '如家酒店'},
