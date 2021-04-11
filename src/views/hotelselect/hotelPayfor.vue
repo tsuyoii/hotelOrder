@@ -284,7 +284,7 @@
                     else if(resp.data.data.code === 500){
                         alert("账号密码错误")
                     }
-                    else if(this.payForm.roomtype == "顾客定价房"){
+                    else if(this.payForm.roomtype == "定价房"){
                         //但是仍然添加进入订单，状态为未支付
                         axios.post('/book/addbook', paramno).then(resp => {
                             console.log(resp)
@@ -332,7 +332,7 @@
             },
             nextStep2() {
                 console.log('submit!');
-                if(this.payForm.roomtype == "顾客定价房"){
+                if(this.payForm.roomtype == "定价房"){
                     this.payForm.price = ''
                 }
                 this.activeStep+=1;
