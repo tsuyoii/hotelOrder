@@ -143,9 +143,9 @@
                     <span style="position:relative;font: large bold;margin-left: 5px;top:-8px">{{ item.room_type }}</span>
                     <span style="margin-left: 20px" v-show="item.isCustomPrice">
                         <el-tag
-                                key="顾客定价房"
+                                key="定价房"
                                 type="warning"
-                                effect="plain">顾客定价房
+                                effect="plain">定价房
                         </el-tag>
                     </span>
                     <span style="font:large bold;float:right;color: #ff9900">￥{{ item.room_price }}元<br>
@@ -376,8 +376,8 @@
             },
             order(item){
                 if (item.room_state == "空闲") {
-                    if(item.room_type == "顾客定价房") {
-                        alert('此房间为顾客定价房，可先填写订单，入住离开后再付款')
+                    if(item.room_type == "定价房") {
+                        alert('此房间为定价房，可先填写订单，入住离开后再付款')
                     }
                     this.$router.push({
                         path: '/hotelPayfor',
